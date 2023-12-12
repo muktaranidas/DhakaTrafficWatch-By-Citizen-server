@@ -28,7 +28,7 @@ async function run() {
     const complainCollection = client.db("whichBook").collection("complain");
     const usersCollection = client.db("whichBook").collection("users");
 
-    // get all complains datas
+    // get all complains data
     app.get("/users", async (req, res) => {
       const result = await usersCollection.find().toArray();
       res.status(200).json({
